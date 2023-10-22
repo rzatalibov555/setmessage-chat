@@ -4,12 +4,9 @@ import axios from "axios";
 const LongPulling = () => {
 
     const [messages, setMessages] = useState([]);
-    const [value, setValue] = useState();
+    const [value, setValue] = useState('');
 
-    useEffect(()=>{
-        subscribe()
-        console.log(subscribe())
-    }, [])
+
 
     const subscribe = async () => {
         try {
@@ -23,7 +20,10 @@ const LongPulling = () => {
         }
     }
 
-
+    useEffect(()=>{
+        subscribe()
+      
+    }, [])
 
     const sendMessage = async () => {
         // first install axios: npm i axios
@@ -38,7 +38,7 @@ const LongPulling = () => {
         <div className="center">
             <div>
                 <div className="form">
-                    <input value={value} onChange={e => setValue(e.target.value)} placeholder="Enter your message" />
+                    <input value={value} onChange={e => setValue(e.target.value)} type="text" placeholder="Enter your message" />
                     <button onClick={sendMessage}>Send</button>
                 </div>
 

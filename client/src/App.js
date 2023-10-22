@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import LongPulling from './LongPulling';
 
 function App() {
   return (
     <div>
-      
+      <LongPulling/>
     </div>
   );
 }
